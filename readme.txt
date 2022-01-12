@@ -1,6 +1,6 @@
 === Axio Core ===
 Contributors: Teemu Suoranta
-Tags: wordpress, axio, core
+Tags: wordpress, axio, core, axio-starter
 Requires at least: 5.0.0
 Tested up to: 5.5.1
 Requires PHP: 7.0
@@ -62,8 +62,10 @@ localization:
 plugins:
 
 * acf
+* cookiebot
 * gravityforms
 * redirection
+* public post preview
 * seo
 * yoast
 
@@ -126,6 +128,9 @@ Note that if you disable a feature, all underlying subfeatures will b
 Download and activate. That's it.
 
 == Changelog ==
+
+= 1.1.0 =
+Add possibility to force ACF block mode, hide Cookiebot admin notice and extend Public Post Preview nonce.
 
 = 1.0.0 =
 Initial release.

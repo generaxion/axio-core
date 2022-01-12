@@ -44,6 +44,10 @@ class PluginsAcfTest extends WP_UnitTestCase {
     $this->assertSame(
       10, has_filter('acf/settings/show_admin', array($class, 'axio_core_hide_acf_from_nonadmins'))
     );
+    // check filter hook
+    $this->assertSame(
+      1, has_filter('render_block_data', array($class, 'axio_core_acf_render_block_data'))
+    );
 
     // AXIO_CORE_HIDE_ACF_FROM_NONADMINS()
 

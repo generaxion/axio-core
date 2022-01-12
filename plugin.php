@@ -2,14 +2,14 @@
 /**
  * Plugin Name:    Axio Core
  * Description:    Core functionality to Axio Starter powered sites
- * Version:        1.0.0
+ * Version:        1.1.0
  * Author:         Generaxion
  * Author URI:     https://www.generaxion.com
  * Text Domain:    axio-core
  */
 
 // constant: version for cache busting etc
-define('AXIO_CORE_VERSION', '1.0.0');
+define('AXIO_CORE_VERSION', '1.1.0');
 
 // constant: plugin's root directory (used in some sub_features)
 define('AXIO_CORE_DIR', plugins_url('', __FILE__));
@@ -99,8 +99,10 @@ class Axio_Core {
       // plugins
       require_once 'features/plugins/class-plugins.php';
       require_once 'features/plugins/sub_features/class-plugins-acf.php';
+      require_once 'features/plugins/sub_features/class-plugins-cookiebot.php';
       require_once 'features/plugins/sub_features/class-plugins-gravityforms.php';
       require_once 'features/plugins/sub_features/class-plugins-redirection.php';
+      require_once 'features/plugins/sub_features/class-plugins-public-post-preview.php';
       require_once 'features/plugins/sub_features/class-plugins-seo.php';
       require_once 'features/plugins/sub_features/class-plugins-yoast.php';
 

@@ -51,8 +51,10 @@ Features (containing subfeatures) ranging from security settings to speed optimi
     - string translations
 - plugins
     - acf
+    - cookiebot
     - gravityforms
     - redirection
+    - public post preview
     - seo
     - yoast
 - polyfills
