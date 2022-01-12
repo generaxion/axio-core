@@ -12,6 +12,7 @@ Core plugin for WordPress projects.
 == Description ==
 The plugin contains the features and settings generally deemed to be the most commonly used in all projects. It is meant to be used together with [axio-starter](https://github.com/generaxion/axio-starter) but functions on its own as well. Use the site specific plugin to configure the specs of this plugin.
 
+This plugin replaces the previous Aucor Core and is backwards compatible with same function and filter names working.
 
 == Contents ==
 
