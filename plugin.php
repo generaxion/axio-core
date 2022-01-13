@@ -2,14 +2,14 @@
 /**
  * Plugin Name:    Axio Core
  * Description:    Core functionality to Axio Starter powered sites
- * Version:        1.1.0
+ * Version:        1.1.1
  * Author:         Generaxion
  * Author URI:     https://www.generaxion.com
  * Text Domain:    axio-core
  */
 
 // constant: version for cache busting etc
-define('AXIO_CORE_VERSION', '1.1.0');
+define('AXIO_CORE_VERSION', '1.1.1');
 
 // constant: plugin's root directory (used in some sub_features)
 define('AXIO_CORE_DIR', plugins_url('', __FILE__));

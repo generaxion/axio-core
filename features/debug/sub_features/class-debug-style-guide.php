@@ -34,6 +34,10 @@ class Axio_Core_Debug_Style_Guide extends Axio_Core_Sub_Feature {
    */
   public static function axio_core_style_guide_markup($content) {
     if (isset($_GET['ac-debug']) && $_GET['ac-debug'] == 'styleguide') {
+
+      // placeholder image
+      $img_url = AXIO_CORE_DIR . '/assets/placeholder.jpg';
+
       // get wp default large and medium image sizes
       $img_medium_w = get_option('medium_size_w');
       $img_large_w = get_option('large_size_w');
@@ -108,13 +112,13 @@ class Axio_Core_Debug_Style_Guide extends Axio_Core_Sub_Feature {
       <p>Paragraph - Aenean id erat ut justo faucibus sollicitudin. Sed facilisis quam vitae mauris vehicula, id elementum dui mollis. Cras commodo neque id lorem vehicula, vel aliquet arcu volutpat. Duis consequat ligula elit, eget pellentesque diam molestie nec. Phasellus facilisis vulputate dui non luctus.</p>
 
       <p>
-        <img class="size-large alignnone" src="https://source.unsplash.com/<?php echo $img_large_w . 'x' . $img_large_w; ?>/?doge" width="<?php echo $img_large_w; ?>" alt="Large image, align none">
+        <img class="size-large alignnone" src="<?php echo esc_attr($img_url); ?>" width="<?php echo esc_attr($img_large_w); ?>" alt="Large image, align none">
       </p>
 
       <p>Paragraph - Nulla efficitur justo in turpis fermentum, eu pellentesque justo sagittis. Morbi pretium elit sed interdum sodales. Phasellus a dui mattis, sollicitudin mauris in, convallis est. Nullam a urna et est ultrices aliquet.</p>
 
       <p>
-        <img class="size-medium alignleft" src="https://source.unsplash.com/<?php echo $img_medium_w . 'x' . $img_medium_w; ?>/?doge" width="<?php echo $img_medium_w; ?>" alt="Medium image, align left">
+        <img class="size-medium alignleft" src="<?php echo esc_attr($img_url); ?>" width="<?php echo esc_attr($img_medium_w); ?>" alt="Medium image, align left">
       </p>
 
       <p>Paragraph - Aenean nec maximus augue. Nullam ac dapibus urna. Nunc dignissim magna leo. Duis at convallis nisi. Pellentesque eu congue odio. Proin imperdiet eros a tincidunt dignissim. Nam euismod id metus vitae maximus. Vestibulum in nulla vulputate, vehicula odio elementum, tincidunt risus.</p>
@@ -128,7 +132,7 @@ class Axio_Core_Debug_Style_Guide extends Axio_Core_Sub_Feature {
       <p>Paragraph - Aenean id erat ut justo faucibus sollicitudin. Sed facilisis quam vitae mauris vehicula, id elementum dui mollis. Cras commodo neque id lorem vehicula, vel aliquet arcu volutpat. Duis consequat ligula elit, eget pellentesque diam molestie nec. Phasellus facilisis vulputate dui non luctus.</p>
 
       <p>
-        <img class="size-medium alignright" src="https://source.unsplash.com/<?php echo $img_medium_w . 'x' . $img_medium_w; ?>/?doge" width="<?php echo $img_medium_w; ?>" alt="Medium image, align right">
+        <img class="size-medium alignright" src="<?php echo esc_attr($img_url); ?>" width="<?php echo esc_attr($img_medium_w); ?>" alt="Medium image, align right">
       </p>
 
       <p>Paragraph - Vivamus interdum metus eros, id semper libero euismod consectetur. Sed ac magna tincidunt, accumsan ligula sit amet, fringilla sapien.</p>
@@ -136,22 +140,22 @@ class Axio_Core_Debug_Style_Guide extends Axio_Core_Sub_Feature {
       <p>Paragraph - Cras turpis ante, varius quis auctor in, molestie non sapien. Duis efficitur, ante in volutpat vulputate, est turpis lacinia metus, et tincidunt nulla turpis sit amet nibh. In tincidunt, tortor quis euismod interdum, metus neque elementum sem, quis lacinia nisi mi non enim. Vestibulum scelerisque, massa id congue hendrerit, justo libero congue sapien, eleifend pellentesque tellus eros et ipsum. Maecenas quis dapibus nibh, id malesuada nunc. Etiam pretium eros in arcu commodo aliquam. Duis orci leo, faucibus sit amet auctor sed, dictum hendrerit massa. Nunc at nunc euismod odio feugiat malesuada. Nunc quam mauris, varius non euismod vitae, porttitor ac neque. Vivamus lacus dolor, efficitur aliquam egestas ac, rhoncus nec urna. Mauris nec sem turpis. Sed pharetra ipsum non nisl pretium condimentum.</p>
 
       <p>Paragraph - Suspendisse rutrum nibh vel efficitur semper. Fusce accumsan tristique arcu ut egestas. Nullam tempus est vel lectus tincidunt euismod. Etiam venenatis elit eu odio volutpat rutrum. Fusce id auctor lacus. Pellentesque sit amet aliquet enim, in dapibus sem. Sed mauris nulla, convallis ac risus sit amet, porta tincidunt purus. Vivamus at magna sed sem porttitor sagittis aliquam et urna. Etiam mattis risus a nunc malesuada condimentum. Ut felis est, rutrum vel dapibus ac, tincidunt sit amet orci.</p>
-      <figure class="wp-caption alignnone" style="width:<?php echo $img_large_w; ?>px">
-        <img class="size-large" src="https://source.unsplash.com/<?php echo $img_large_w . 'x' . $img_large_w; ?>/?doge" width="<?php echo $img_large_w; ?>" alt="Large image with caption, align none">
+      <figure class="wp-caption alignnone" style="width:<?php echo esc_attr($img_large_w); ?>px">
+        <img class="size-large" src="<?php echo esc_attr($img_url); ?>" width="<?php echo esc_attr($img_large_w); ?>" alt="Large image with caption, align none">
         <figcaption class="wp-caption-text">Caption - Proin imperdiet eros a tincidunt dignissim. Nam euismod id metus vitae maximus.</figcaption>
       </figure>
 
       <p>Paragraph - Aenean id erat ut justo faucibus sollicitudin. Sed facilisis quam vitae mauris vehicula, id elementum dui mollis. Cras commodo neque id lorem vehicula, vel aliquet arcu volutpat. Duis consequat ligula elit, eget pellentesque diam molestie nec. Phasellus facilisis vulputate dui non luctus.</p>
 
-      <figure class="wp-caption aligncenter" style="width:<?php echo $img_medium_w; ?>px">
-        <img class="size-medium" src="https://source.unsplash.com/<?php echo $img_medium_w . 'x' . $img_medium_w; ?>/?doge" width="<?php echo $img_medium_w; ?>" alt="Medium image with caption, align center">
+      <figure class="wp-caption aligncenter" style="width:<?php echo esc_attr($img_medium_w); ?>px">
+        <img class="size-medium" src="<?php echo esc_attr($img_url); ?>" width="<?php echo esc_attr($img_medium_w); ?>" alt="Medium image with caption, align center">
         <figcaption class="wp-caption-text">Caption - Sed sollicitudin tristique cursus.</figcaption>
       </figure>
 
       <p>Paragraph - Nulla efficitur justo in turpis fermentum, eu pellentesque justo sagittis. Morbi pretium elit sed interdum sodales. Phasellus a dui mattis, sollicitudin mauris in, convallis est. Nullam a urna et est ultrices aliquet.</p>
 
-      <figure class="wp-caption alignleft" style="width:<?php echo $img_medium_w; ?>px">
-        <img class="size-medium" src="https://source.unsplash.com/<?php echo $img_medium_w . 'x' . $img_medium_w; ?>/?doge" width="<?php echo $img_medium_w; ?>" alt="Medium image with caption, align left">
+      <figure class="wp-caption alignleft" style="width:<?php echo esc_attr($img_medium_w); ?>px">
+        <img class="size-medium" src="<?php echo esc_attr($img_url); ?>" width="<?php echo esc_attr($img_medium_w); ?>" alt="Medium image with caption, align left">
         <figcaption class="wp-caption-text">Caption - Sed sollicitudin tristique cursus.</figcaption>
       </figure>
 

@@ -62,7 +62,7 @@ if ($instance->is_active()) :
   }
   if (!function_exists('pll_e')) {
     function pll_e($s) {
-      echo $s;
+      echo wp_kses($s, wp_kses_allowed_html());
     }
   }
   if (!function_exists('pll_esc_html__')) {

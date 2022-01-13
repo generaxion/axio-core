@@ -56,7 +56,7 @@ if ($instance->is_active() && (!is_admin() || (defined('WP_CLI') && WP_CLI))) :
   }
   if (!function_exists('the_field')) {
     function the_field($selector, $post_id = false, $format_value = true) {
-      echo get_field($selector, $post_id, $format_value);
+      echo wp_kses(get_field($selector, $post_id, $format_value), wp_kses_allowed_html());
     }
   }
   if (!function_exists('get_fields')) {
@@ -81,7 +81,7 @@ if ($instance->is_active() && (!is_admin() || (defined('WP_CLI') && WP_CLI))) :
   }
   if (!function_exists('the_sub_field')) {
     function the_sub_field($selector, $format_value = true) {
-      echo get_sub_field($selector, $format_value);
+      echo wp_kses(get_sub_field($selector, $format_value), wp_kses_allowed_html());
     }
   }
 endif;

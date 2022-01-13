@@ -99,7 +99,7 @@ if (!function_exists('ask__')) {
 if (!function_exists('ask_e')) {
 
   function ask_e($key, $lang = null) {
-    echo ask__($key, $lang);
+    echo wp_kses(ask__($key, $lang), wp_kses_allowed_html());
   }
 
 }
@@ -144,7 +144,7 @@ if (!function_exists('asv__')) {
 if (!function_exists('asv_e')) {
 
   function asv_e($value, $lang = null) {
-    echo asv__($value, $lang);
+    echo wp_kses(asv__($value, $lang), wp_kses_allowed_html());
   }
 
 }

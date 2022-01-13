@@ -2,9 +2,9 @@
 Contributors: Teemu Suoranta
 Tags: wordpress, axio, core, axio-starter
 Requires at least: 5.0.0
-Tested up to: 5.5.1
+Tested up to: 5.8.3
 Requires PHP: 7.0
-Stable tag: trunk
+Stable tag: 1.1.1
 License: GPLv2+
 
 Core plugin for WordPress projects.
@@ -128,6 +128,9 @@ Note that if you disable a feature, all underlying subfeatures will b
 Download and activate. That's it.
 
 == Changelog ==
+
+= 1.1.1 =
+Enhanced data sanitazing on echoing functions, fix metadata errors, move to local placeholder image on styleguide.
 
 = 1.1.0 =
 Add possibility to force ACF block mode, hide Cookiebot admin notice and extend Public Post Preview nonce.

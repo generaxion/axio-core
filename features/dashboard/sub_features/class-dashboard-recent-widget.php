@@ -110,9 +110,9 @@ class Axio_Core_Dashboard_Recent_Widget extends Axio_Core_Sub_Feature {
       ?>
       <div class="axio-recent-section">
         <h3><?php echo esc_attr__('My content and changes', 'axio-core'); ?></h3>
+        <ul>
       <?php
         $limit = (count($user_posts) > 4) ? 4 : count($user_posts);
-        echo '<ul>';
         for ($i=0; $i < $limit; $i++) {
           $obj = get_post_type_object(get_post_type($user_posts[$i]->ID));
           $obj_name = '';
@@ -128,7 +128,7 @@ class Axio_Core_Dashboard_Recent_Widget extends Axio_Core_Sub_Feature {
           }
           $modified_time = date_create($user_posts[$i]->post_modified);
       ?>
-        <li><span class="axio-recent-time"><?php echo date_format($modified_time, "$date_format $time_format" ); ?></span><span class="axio-recent-link"><?php edit_post_link($title, '', '', $user_posts[$i]->ID); ?></span></li>
+        <li><span class="axio-recent-time"><?php echo esc_html(date_format($modified_time, "$date_format $time_format")); ?></span><span class="axio-recent-link"><?php edit_post_link($title, '', '', $user_posts[$i]->ID); ?></span></li>
         <?php
       }
         ?>
@@ -153,6 +153,7 @@ class Axio_Core_Dashboard_Recent_Widget extends Axio_Core_Sub_Feature {
 
     <div class="axio-recent-section">
       <h3><?php echo esc_attr__('Recent edits', 'axio-core'); ?></h3>
+      <ul>
       <?php
       $query = new WP_Query(array(
         'post_type'               => $post_types,
@@ -164,7 +165,6 @@ class Axio_Core_Dashboard_Recent_Widget extends Axio_Core_Sub_Feature {
         'update_post_term_cache'  => false, // no tax
         'update_post_meta_cache'  => false, // no meta
       ));
-      echo '<ul>';
       while ($query->have_posts()) : $query->the_post();
         $obj = get_post_type_object(get_post_type($query->post->ID));
         $obj_name = '';
@@ -179,11 +179,11 @@ class Axio_Core_Dashboard_Recent_Widget extends Axio_Core_Sub_Feature {
           $title .= ' (' . $obj_name . ')';
         }
       ?>
-        <li><span class="axio-recent-time"><?php echo get_the_modified_date("$date_format $time_format"); ?></span><span class="axio-recent-link"><?php edit_post_link($title, '', '', $query->post->ID); ?></span></li>
+        <li><span class="axio-recent-time"><?php echo esc_html(get_the_modified_date("$date_format $time_format")); ?></span><span class="axio-recent-link"><?php edit_post_link($title, '', '', $query->post->ID); ?></span></li>
         <?php
       endwhile;
-      echo '</ul>';
       ?>
+      </ul>
     </div>
       <?php
     endif;
