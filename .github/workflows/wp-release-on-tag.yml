@@ -14,4 +14,4 @@ jobs:
       uses: 10up/action-wordpress-plugin-deploy@master
       env:
         SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
-        SVN_USERNAME: generaxion
+        SVN_USERNAME: aucor
