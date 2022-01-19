@@ -129,6 +129,9 @@ Download and activate. That's it.
 
 == Changelog ==
 
+= 1.1.2 =
+Added feature to force suffix to attachment page slugs to prevent attachments from reserving nice slugs.
+
 = 1.1.1 =
 Enhanced data sanitazing on echoing functions, fix metadata errors, move to local placeholder image on styleguide.
 

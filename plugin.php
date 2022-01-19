@@ -2,14 +2,14 @@
 /**
  * Plugin Name:    Axio Core
  * Description:    Core functionality to Axio Starter powered sites
- * Version:        1.1.1
+ * Version:        1.1.2
  * Author:         Generaxion
  * Author URI:     https://www.generaxion.com
  * Text Domain:    axio-core
  */
 
 // constant: version for cache busting etc
-define('AXIO_CORE_VERSION', '1.1.1');
+define('AXIO_CORE_VERSION', '1.1.2');
 
 // constant: plugin's root directory (used in some sub_features)
 define('AXIO_CORE_DIR', plugins_url('', __FILE__));
@@ -95,6 +95,7 @@ class Axio_Core {
       require_once 'features/front-end/sub_features/class-front-end-clean-empty-html.php';
       require_once 'features/front-end/sub_features/class-front-end-excerpt.php';
       require_once 'features/front-end/sub_features/class-front-end-html-fixes.php';
+      require_once 'features/front-end/sub_features/class-front-end-uglify-attachment-permalink.php';
 
       // plugins
       require_once 'features/plugins/class-plugins.php';
